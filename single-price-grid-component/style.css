@@ -4,8 +4,16 @@
     box-sizing: border-box;
 } 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 14px; 
+    text-align: center;
+    color: hsl(179, 62%, 43%)
+ }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration-line: none
+}
+
 p {
      font-size: 16px;
      font-weight: 400;
@@ -14,6 +22,11 @@ p {
 span {
     font-size: 2.0rem;
     font-weight: 600;
+}
+
+body {
+    font-family: 'Karla', Helvetica, Arial, Verdana, sans-serif; 
+    color: white;
 }
 
 section {
