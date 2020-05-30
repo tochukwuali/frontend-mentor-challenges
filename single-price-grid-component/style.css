@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+} 
+
+p {
+     font-size: 16px;
+     font-weight: 400;
+}
+
+span {
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+section {
+    font-family: 'Karla', Helvetica, Arial, Verdana, sans-serif; 
+    color: white;
+    min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(204, 43%, 93%);
+    padding: 100px 30px;  
+}
+.main {
+    box-shadow: 0px 0px 14px 1px #00000024;
+    width: 660px;
+    display: grid;
+    grid-template-columns: 100%;
+    border-radius: 8px; 
+    overflow: hidden;
+}
+
+.content {
+    padding: 40px;
+}
+
+.up p{
+    color: hsl(218, 22%, 67%);
+	font-size: 1rem;
+    line-height: 1.5rem;
+}
+.up h2 {
+    color:hsl(179, 62%, 43%);  
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+.up h3 {
+     color:hsl(71, 73%, 54%);
+     font-size: 1rem;
+     margin-bottom: 15px;
+}
+
+.up {
+    background: white;
+}
+
+.left-content {
+    background:hsl(179, 62%, 43%);
+    color: hsl(204, 43%, 93%)
+}
+
+.left-content h3 {
+    color: white;
+	font-weight: 400;
+	font-size: 1.3rem;
+	margin: 0 
+}
+
+.left-content p {
+    font-size: 1.0rem;
+	font-weight: 400;
+}
+
+.right-content {
+    border-left: 0.2px solid rgba(13, 175, 175, 0.856);
+    background:rgba(13, 175, 175, 0.692);
+    padding-left: 40px;
+    color: hsl(204, 43%, 93%);
+}
+
+.right-content h3 {
+    color: white;
+	font-weight: 400;
+	font-size: 1.3rem;
+	margin-top: 0;
+}
+
+button {
+     border-radius: 5px;
+     border: none;
+     background:hsl(71, 73%, 54%);
+     color: white;
+     font-size: 15px;
+     font-weight: 600;
+     padding: 15px 70px 15px 70px ;
+     transition: transform 80ms ease in;
+     text-align: center;
+     width: 100%;
+     display: inline-block;
+     margin-top: 20px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+li {
+    list-style: none;
+    font-size: 15px;
+    color: hsl(204, 43%, 93%);
+	line-height: 1.2rem;
+    padding: 1px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 205px 275px;
+    }
+
+    .main .up {
+        grid-column: 1 / -1;
+    }
+
+    .main .left-content {
+        grid-column: 1/ 2;
+    }
+
+    .main .right-content {
+        grid-column: 2 /3;
+    }
+}
