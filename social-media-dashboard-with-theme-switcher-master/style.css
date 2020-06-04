@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* change fom px to rem for fonts */
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+    color: white;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h4, h3, h2 {
+    color: white;
+    margin-left: 30px;
+}
+
+h5 {
+   color: hsla(0, 0%, 100%, 0.616);
+   margin-left: 30px;
+   padding: 5px;
+}
+
+.likes-views, .followers {
+    color: hsla(0, 0%, 100%, 0.616);
+}
+
+.white {
+    color: white;
+}
+
+.lower-section .white {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.username {
+    color: hsla(0, 0%, 100%, 0.616);
+}
+
+.green {
+    color: hsl(163, 72%, 41%);
+}
+
+.red {
+    color: hsl(356, 69%, 56%);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background-color: hsl(230, 17%, 14%); 
+    padding: 100px 30px;    
+}
+
+.wrapper {
+    margin: 40px;
+    padding: 20px;
+    width: 100%;
+}
+
+.dark-mode {
+    text-align: right;
+    margin-top: -50px 
+}
+
+.wrapper section {
+	width: 100%;
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding: 30px;
+}
+
+.upper-section {
+   
+}
+.upper-section div {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    background-color: hsl(228, 28%, 20%);
+}
+
+.upper-section div p {
+    margin: 10px 0px 10px 0px;
+}
+
+.upper-section h6 {
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.upper-section .white {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.upper-section .fb {
+    border-top: 3px solid hsl(208, 92%, 53%);
+}
+
+.upper-section .tw {
+    border-top: 3px solid hsl(203, 89%, 53%);
+}
+
+.upper-section .ig {
+    border: 3px solid transparent;
+    border-radius: 3px;
+    background: 
+        linear-gradient( white, white),
+        linear-gradient(15deg, #fbc369, #de4896); 
+    background-repeat: no-repeat;
+    background-origin: padding-box, border-box;    
+}
+
+.upper-section .yt {
+    border-top: 3px solid hsl(348, 97%, 39%);
+}
+
+.lower-section {
+    grid-template-rows: repeat(2, 100px);
+        
+}
+
+.lower-section div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    background-color: hsl(228, 28%, 20%);
+    border-radius: 5px;
+}
+
+.lower-section .overview-link, small {
+     justify-self: end;
+}
+
+.lower-section small {
+    margin-top: 10px;
+}
+
+div {
+   
+}
