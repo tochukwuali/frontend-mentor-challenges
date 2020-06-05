@@ -6,9 +6,11 @@
     font-size: 14px; 
     text-align: center; 
     color: white;
+   
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+    text-decoration-line: none;
 }
 
 * {
@@ -24,12 +26,33 @@ h4, h3, h2 {
 
 h5 {
    color: hsla(0, 0%, 100%, 0.616);
-   margin-left: 30px;
-   padding: 5px;
+   margin-left: 60px;
+   padding-top: 1px;
+}
+
+header {
+    position: absolute;
+    z-index: 10;
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+    background-color:  hsl(232, 19%, 15%);
+}
+
+header h2 {
+    margin-left: 60px;
+}
+
+small {
+    font-size: 10px;
 }
 
 .likes-views, .followers {
     color: hsla(0, 0%, 100%, 0.616);
+}
+
+.likes-views, .username {
+    font-size: 12px;
 }
 
 .white {
@@ -43,6 +66,7 @@ h5 {
 
 .username {
     color: hsla(0, 0%, 100%, 0.616);
+    display: inline-flex;
 }
 
 .green {
@@ -55,37 +79,41 @@ h5 {
 
 body {
     font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-    background-color: hsl(230, 17%, 14%); 
-    padding: 100px 30px;    
+    background-color: hsl(230, 17%, 14%);
 }
 
 .wrapper {
-    margin: 40px;
-    padding: 20px;
-    width: 100%;
-}
+    width: 100%; 
+    min-height: 100vh;
+    display: grid;
+	align-items: center;
+    justify-content: stretch;
+    padding: 80px 30px;
+} 
 
 .dark-mode {
-    text-align: right;
+    text-align: end;
     margin-top: -50px 
 }
 
-.wrapper section {
-	width: 100%;
-	display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    padding: 30px;
+section {
+    width: 100%;   
+    
 }
 
-.upper-section {
-   
+section .upper-section, section .lower-section {
+	display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 15px;
+    padding: 30px;
+    position: relative;
+    z-index: 5000;
 }
+
+.upper-section .overview-link {
+    margin-right: 5px;
+}
+
 .upper-section div {
     text-align: center;
     padding: 10px 0px 10px 0px;
@@ -108,31 +136,60 @@ body {
     font-weight: 700;
 }
 
-.upper-section .fb {
-    border-top: 3px solid hsl(208, 92%, 53%);
+.upper-section div {
+    position: relative;
 }
 
-.upper-section .tw {
-    border-top: 3px solid hsl(203, 89%, 53%);
+.upper-section .fb:before {
+    content: "";
+    display: block;
+    background-image: linear-gradient(to right,  hsl(208, 92%, 53%),  hsl(208, 92%, 53%));
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
 }
 
-.upper-section .ig {
-    border: 3px solid transparent;
-    border-radius: 3px;
-    background: 
-        linear-gradient( white, white),
-        linear-gradient(15deg, #fbc369, #de4896); 
-    background-repeat: no-repeat;
-    background-origin: padding-box, border-box;    
+.upper-section .tw:before {
+    content: "";
+    display: block;
+    background-image: linear-gradient(to right, hsl(203, 89%, 53%), hsl(203, 89%, 53%));
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
 }
 
-.upper-section .yt {
-    border-top: 3px solid hsl(348, 97%, 39%);
+.upper-section .ig:before {
+    content: "";
+    display: block;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px 3px 0 0;   
+}
+
+.upper-section .yt:before {
+    content: "";
+    display: block;
+    background-image: linear-gradient(to right, hsl(348, 97%, 39%), hsl(348, 97%, 39%));
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px 3px 0 0;   
 }
 
 .lower-section {
-    grid-template-rows: repeat(2, 100px);
-        
+    grid-template-rows: repeat(2, 100px);     
 }
 
 .lower-section div {
@@ -148,9 +205,26 @@ body {
 }
 
 .lower-section small {
+    margin-top: 30px;
+}
+
+.lower-section .white {
     margin-top: 10px;
 }
 
-div {
-   
+@media only screen and (min-width: 768px) {
+	section .upper-section, section .lower-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);;
+    },
+
+    .lower-section {
+        grid-template-rows: repeat(2, 100px);     
+    },
+
+    .lower-section div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
